@@ -1,12 +1,13 @@
 class Beer extends Beverage{
-    constructor(name, producer, yob, quantity, alcohol, type, color, bottleNumber, bottleToSell, price) {
-        super(name, producer, yob, quantity, alcohol, bottleNumber, bottleToSell, price);
+    constructor(name, producer, yob, quantity, alcohol, type, color, bottleNumber, price) {
+        super(name, producer, yob, quantity, alcohol, bottleNumber, price);
         this.type = type;
         this.color = color;
     }
     toString() {
-        return super.toString() + "\n" +
-            "tipo: " + this.type + "\n" +
-            "colore: " + this.color + "\n";
+        return `Birra
+${super.toString()}
+tipologia: ${this.type}
+colore: ${this.color}` 
     }
 }

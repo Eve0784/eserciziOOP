@@ -1,6 +1,6 @@
 class PremiumWine extends Wine{
-     constructor(name, producer, yob, quantity, alcohol,  bottleNumber, bottleToSell, price, vite, location, certification) {
-        super(name, producer, yob, quantity, alcohol, bottleNumber, bottleToSell, price, vite, location);
+     constructor(name, producer, yob, quantity, alcohol,  bottleNumber, price, vite, location, certification) {
+        super(name, producer, yob, quantity, alcohol, bottleNumber, price, vite, location);
         this.certification = certification;
     }
 
@@ -9,8 +9,15 @@ class PremiumWine extends Wine{
         const basePrice = this._price;
         return basePrice +(basePrice / 10) * yearsOfAge;
     }
-    toString() {
-        return super.toString() + "\n" +
-            "certificazione: " + this.certification  + "\n";
+        set price(newPrice){
+        if (newPrice  >= 0) {
+            this._price = newPrice;
+        }else {
+            return "il nuovo prezzo non è valido";
+        }
+    }
+    toString(){
+        return `${super.toString()}
+certificazione: ${this.certification}`
     }
 }

@@ -156,3 +156,52 @@ bottleNumberContainer.appendChild(bottleNumberKey);
 const bottleNumberValue = document.createElement('span');
 bottleNumberValue.innerText = champagne.bottleNumber;
 bottleNumberContainer.appendChild(bottleNumberValue);
+
+
+//---------------- Aggiungiamo la il div dove va il prezzo------------------------//
+const priceContainer = document.createElement('div');
+newCard.appendChild(priceContainer);
+
+const priceKey = document.createElement('strong');
+priceKey.innerText = 'Prezzo: ';
+priceContainer.appendChild(priceKey);
+
+const priceValue = document.createElement('span');
+priceValue.innerText = champagne.price + "€";
+priceContainer.appendChild(priceValue);
+
+//---------------- Aggiungiamo la il div dove va il vitigno-----------------------//
+const viteContainer = document.createElement('div');
+newCard.appendChild(viteContainer);
+
+const viteKey = document.createElement('strong');
+viteKey.innerText = 'Vitigno: ';
+viteContainer.appendChild(viteKey);
+
+const viteValue = document.createElement('span');
+viteValue.innerText = champagne.vite;
+viteContainer.appendChild(viteValue);
+
+//---------------- Aggiungiamo la il div dove va la localita------------------------//
+const locationContainer = document.createElement('div');
+newCard.appendChild(locationContainer);
+
+const locationKey = document.createElement('strong');
+locationKey.innerText = 'Località: ';
+locationContainer.appendChild(locationKey);
+
+const locationValue = document.createElement('span');
+locationValue.innerText = champagne.location;
+locationContainer.appendChild(locationValue);
+
+//---------------- Aggiungiamo la il div dove va la certificazione-----------------------//
+const certificationContainer = document.createElement('div');
+newCard.appendChild(certificationContainer);
+
+const certificationKey = document.createElement('strong');
+certificationKey.innerText = 'Certificazione: ';
+certificationContainer.appendChild(certificationKey);
+
+const certificationValue = document.createElement('span');
+certificationValue.innerText = champagne.certification;
+certificationContainer.appendChild(certificationValue);
